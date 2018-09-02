@@ -1,0 +1,44 @@
+.clearfix:before,
+.clearfix:after
+  content ' '
+  display table
+
+.clearfix:after
+  clear both
+
+
+html, body
+  font-family "Roboto"
+  font-size 15px
+  scroll-behavior smooth
+  min-width 320px
+
+::-moz-selection
+  background lighten(color_brown, 25%)
+::selection
+  background lighten(color_brown, 25%)
+
+.container
+  max-width 1150px
+  margin 0 auto
+
+
+@media all and (max-width: width_lg)
+  .container
+    max-width 900px
+
+
+@media all and (max-width: width_md)
+  .container
+    max-width 730px
+
+
+@media all and (max-width: width_sm)
+  .container
+    max-width calc(100vw - 40px)
+
+
+@media all and (max-width: width_xs)
+  .container
+    max-width 400px
+    width calc(100vw - 40px) !important

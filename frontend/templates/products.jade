@@ -1,0 +1,28 @@
+.products#products(ng-controller="productsCtrl")
+   .products__filters
+       .container
+           .filters
+               .filters__wrap
+                   .filter
+                       label.filter__container Men
+                           input.filter__checkbox(type='checkbox', ng-model="showCategory.men")
+                           span.filter__checkmark
+                   .filter
+                       label.filter__container Women
+                           input.filter__checkbox(type='checkbox', ng-model="showCategory.women")
+                           span.filter__checkmark
+                   .filter
+                       label.filter__container Children
+                           input.filter__checkbox(type='checkbox', ng-model="showCategory.child")
+                           span.filter__checkmark
+               a.filters__all(href='', ng-click="resetFilters()") see all products
+   .products__wrap
+       .products__list.container
+           a.product(ng-repeat = "product in data.items | filter : changeFilter")
+               .product__size
+                   select.product__size_dropdown
+                       option(ng-repeat = "opt in product.options", value="{{option.id}}") {{ opt }}
+               img.product__img(ng-src='images/products_photos/{{product.img}}.png', ng-if="product.img",  ng-click='clickToOpen(product)')
+               .product__desc
+                   .product__title {{product.name}}
+                   .product__price {{product.price | currency : "€"}}

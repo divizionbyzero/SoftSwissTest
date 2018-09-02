@@ -1,0 +1,24 @@
+{
+  "name": "forte",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "repository": "https://github.com/divizionbyzero/forte.git",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-stylus": "^2.4.0",
+    "jade": "^1.11.0",
+    "ng-dialog": "^0.6.1",
+    "reset-css": "^2.0.2011012603",
+    "slick-carousel": "^1.6.0",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^2.0.10",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}

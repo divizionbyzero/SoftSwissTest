@@ -1,0 +1,111 @@
+.filters
+  display flex
+  justify-content space-between
+  align-items center
+  padding 0 30px
+  &__all
+    padding 18px 10px
+    background-color color_brown
+    border-radius border_radius
+    color color_white
+    text-decoration none
+    font-size 14px
+    text-transform uppercase
+    transition transition_standard
+    &::selection
+      background color_gray1
+    &::moz-selection
+      background color_gray1
+    &:visited
+      outline none
+      text-decoration none
+    &:hover, &:active
+      background-color color_gray1
+      color color_white
+      outline none
+      text-decoration none
+  &__wrap
+    display flex
+
+
+.filter
+  margin-right 40px
+  &__container
+    display block
+    position relative
+    padding-left 35px
+    color #333
+    font-size 18px
+    text-transform uppercase
+    cursor pointer
+  &__checkbox
+    position absolute
+    opacity 0
+    cursor pointer
+    &:checked ~ .filter__checkmark
+      background color_white
+      border 2px solid color_brown
+      &:after
+        display block
+  &__checkmark
+    position absolute
+    top -4px
+    left 0
+    height 24px
+    width 25px
+    box-sizing border-box
+    background-color color_white
+    border 2px solid #ccc
+    border-radius border_radius
+    transition transition_standard
+    &:after
+      content ''
+      position absolute
+      display none
+      left 7px
+      top 2px
+      width 5px
+      height 10px
+      border solid color_brown
+      border-width 0 3px 3px 0
+      -webkit-transform rotate(45deg)
+      -ms-transform rotate(45deg)
+      transform rotate(45deg)
+      transition transition_standard
+  &:hover .filter__checkbox ~ .filter__checkmark
+    border-color color_brown
+
+
+@media all and (max-width: width_md)
+  .filters
+    &__all
+      padding 18px 15px
+      font-size 15px
+
+
+@media all and (max-width: width_sm)
+  .filters
+    flex-flow column wrap
+    &__all
+      margin-top 30px
+      width 370px
+      text-align center
+      font-size 16px
+
+    .filter
+      &:last-child
+        margin-right 0
+
+
+@media all and (max-width: width_xs)
+  .filters
+    padding 0
+    align-items initial
+    &__all
+      width 100%
+      box-sizing border-box
+    &__wrap
+      flex-flow column
+
+  .filter
+    margin 0 0 20px

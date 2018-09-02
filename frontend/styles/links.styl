@@ -1,0 +1,52 @@
+.links
+  display flex
+  flex-flow column
+  justify-content center
+
+
+.link
+  position relative
+  display inline-block
+  padding 0 7px
+  color color_white
+  opacity .9
+  font-size 14px
+  text-transform uppercase
+  text-decoration none
+  transition transition_standard
+  &:hover
+    color color_brown
+  &:after
+    content ''
+    display block
+    position absolute
+    top 0
+    right 0
+    width 1px
+    height 12px
+    background-color color_brown
+  &:last-child
+    padding-right 0
+    &:after
+      display none
+
+
+@media all and (max-width: width_sm)
+  .links
+    margin-top 40px
+    &__list
+      text-align center
+      white-space nowrap
+
+  .link
+    font-size 16px
+    padding 0 15px
+
+
+@media all and (max-width: width_xs)
+  .link
+    padding 0 5px
+    font-size 13px
+    font-weight 300
+    &:first-child
+      padding-left 0

@@ -1,0 +1,155 @@
+.products
+  background-color color_white
+  &__list
+    display flex
+    flex-flow row wrap
+  &__filters
+    padding 45px 0
+    background-color color_light-bg
+  &__wrap
+    margin 50px 0 210px
+
+
+.product
+  display block
+  overflow hidden
+  margin 30px 33px 40px
+  padding 20px
+  width calc(100% / 3 - 45px)
+  box-sizing border-box
+  background-color color_light-bg
+  border 6px solid color_light-bg
+  border-radius border_radius
+  font-size 0
+  text-decoration none
+  transition border-color transition_standard ease
+  &:nth-child(3n + 1)
+    margin-left 0
+  &:nth-child(3n + 3)
+    margin-right 0
+  &:focus
+    outline-color color_blue
+  &__img
+    display block
+    margin 0 auto
+    width 145px
+    height 230px
+    object-fit contain
+    cursor pointer
+  &__title
+    font-size 18px
+    color color_brown
+    text-transform uppercase
+    white-space nowrap
+    &::selection
+      background color_gray1
+    &::moz-selection
+      background color_gray1
+  &__size
+    margin-bottom 30px
+    cursor pointer
+    &_dropdown
+      -webkit-appearance none
+      -moz-appearance none
+      text-indent 1px
+      text-overflow ''
+      border none
+      font-size 16px
+      color color_gray2
+      text-transform uppercase
+      padding-right 20px
+      background-image url('images/fa-angle-down.png')
+      background-size 12px
+      background-repeat no-repeat
+      background-position 100% 50%
+      outline none
+  &__price
+    display block
+    color color_gray2
+    font-size 22px
+  &:hover
+    border-color color_brown
+  &__desc
+    width 100%
+    padding 30px 0 0
+    align-items center
+    text-align center
+    display flex
+    justify-content space-between
+
+
+@media all and (max-width: width_lg)
+  .product
+    margin 30px 20px 40px
+    width calc(100% / 3 - 28px)
+    &__img
+      height 180px
+
+
+@media all and (max-width: width_md)
+  .products
+    &__wrap
+      margin 0 0 120px
+
+  .product
+    width calc(100% / 2 - 20px)
+    margin 45px 20px 0
+    &:nth-child(3n + 1)
+      margin-left 20px
+    &:nth-child(3n + 3)
+      margin-right 20px
+    &:nth-child(odd)
+      margin-left 0
+    &:nth-child(even)
+      margin-right 0
+
+
+@media all and (max-width: width_sm)
+  .product
+    width calc(100% / 2 - 10px)
+    margin 20px 10px 0
+    &:nth-child(3n + 1)
+      margin-left 10px
+    &:nth-child(3n + 3)
+      margin-right 10px
+    &:nth-child(odd)
+      margin-left 0
+    &:nth-child(even)
+      margin-right 0
+
+  .products
+    &__wrap
+      margin 20px 0 120px
+
+
+@media all and (max-width: 620px)
+  .products
+    &__list
+      flex-flow column
+      align-items center
+
+  .product
+    width calc(100vw - 60px)
+    margin 20px 0 10px !important
+    &__desc
+      padding 20px 0 0
+    &__img
+      width 170px
+      height 220px
+    &__size
+      margin-bottom 15px
+
+
+@media all and (max-width: width_xs)
+  .products
+  &__wrap
+    margin 20px 0 60px
+
+  .product
+    width calc(100vw - 40px)
+    padding 10px
+    &__img
+      width 160px
+      height 190px
+    &__size
+      margin-bottom 20px

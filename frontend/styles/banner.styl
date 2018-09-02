@@ -1,0 +1,86 @@
+.banner
+  position relative
+  display flex
+  flex-flow column
+  justify-content center
+  height 100vh
+  background-image url('images/header-bg.jpg')
+  background-size cover
+  &:before
+    content ''
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    background-color banner_overlay
+  &__top
+    line-height header_height
+  &__body
+    position relative
+    display flex
+    flex-flow column
+    justify-content space-between
+    margin 0 auto
+    width 100%
+    height 100%
+    visibility visible
+    opacity 1
+    transition opacity .3s
+    &_img
+      display block
+      margin 0 auto
+  &__arrow
+    display inline-block
+    padding 45px 0
+    text-align center
+    cursor pointer
+    transition transition_standard
+    &_img
+      width 36px
+    &:hover
+      opacity .8
+  &__title
+    display block
+    margin-bottom 30px
+    color color_white
+    font-size 60px
+    text-align center
+  &__subtitle
+    display block
+    margin 0 auto
+    max-width 600px
+    color color_white
+    font-size 20px
+    text-align center
+    line-height 1.4
+
+
+@media all and (max-width: width_sm)
+  .banner
+    &__body
+      padding-left 0
+    &__title
+      margin-bottom 45px
+      font-size 55px
+
+
+@media all and (max-width: width_xs)
+  .banner
+    background-position 10%
+    &__arrow
+      padding 25px 0
+      &_img
+        width 30px
+    &__title
+      font-size 42px
+      line-height 1
+      margin 0 0 20px
+    &__subtitle
+      font-weight 300
+      font-size 17px
+      line-height 1.6
+    &__top
+      display flex
+      flex-flow column
+      line-height 120px

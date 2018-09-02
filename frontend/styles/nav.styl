@@ -1,0 +1,57 @@
+.nav
+  float right
+  transition .3s
+  display flex
+  align-items center
+  height 120px
+  &__item
+    display flex
+    margin 0 10px
+    padding 0 10px
+    vertical-align top
+    border-bottom 2px solid transparent
+    color color_white
+    font-size 18px
+    text-transform capitalize
+    text-decoration none
+    line-height 2
+    cursor pointer
+    transition transition_standard
+    &:hover
+      border-bottom-color color_brown
+    &:first-child
+      margin-left 0
+    &:last-child
+      margin-right 0
+      height 38px
+      align-items center
+    &_img
+      width 25px
+      height 25px
+      object-fit contain
+
+
+@media all and (max-width: width_md)
+  .nav
+    &__item
+      border none
+
+
+@media all and (max-width: width_xs)
+  .nav
+    height 25px
+    display flex
+    justify-content center
+    &__item
+      margin 0 5px
+      padding 0 10px
+      font-weight 300
+      text-transform uppercase
+      &:first-child
+        padding-left 0
+      &:last-child
+        padding-right 0
+      &_img
+        width 23px
+        height 23px
+        opacity 0.95

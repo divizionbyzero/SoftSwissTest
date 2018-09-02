@@ -1,0 +1,23 @@
+footer.footer#footer(ng-controller="menuCtrl")
+    .footer__line
+        .container
+            .line
+                .line__icon
+                    img.line__icon_img(src='images/fa-twitter.png')
+                span.line__text “ E-commerce psd theme is available ”
+    .footer__big_wrap
+        .container
+            .footer__big
+                .info
+                    .info__title Trekking
+                    .info__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .links
+                    .links__list
+                        a.link(ng-repeat="item in data.footerMenu" href="{{item.link}}" id="{{item.name}}" target="_blank") {{item.title}}
+                    span.footer__themeauthor Design by gianluca cosetta
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/1.4.0/js/ngDialog.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.7.3/angular-locale_de-de.min.js')
+script(src='scripts.js')
+

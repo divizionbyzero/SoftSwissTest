@@ -1,0 +1,21 @@
+.logo
+  display inline-block
+  margin-left 10px
+  cursor pointer
+  transition transition_standard
+  &:active
+    opacity .8
+  &__img
+    margin-right 25px
+    width 53px
+    vertical-align middle
+    letter-spacing 10px
+
+
+@media all and (max-width: width_xs)
+  .logo
+    margin-left 0
+    text-align center
+    &__img
+      margin-right 0
+      width 90px
