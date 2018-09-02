@@ -437,6 +437,9 @@ body {
   background-position: 100% 50%;
   outline: none;
 }
+.product__size_dropdown::-ms-expand {
+  display: none;
+}
 .product__price {
   display: block;
   color: #424242;
