@@ -11,7 +11,7 @@ $ npm i -g gulp
 ```
 
 ```sh
-$ git clone [https://github.com/divizionbyzero/SoftSwissTest.git]
+$ git clone https://github.com/divizionbyzero/SoftSwissTest.git
 $ cd SoftSwissTest
 $ npm i -d
 $ gulp watch

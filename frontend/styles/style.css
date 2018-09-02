@@ -430,6 +430,7 @@ body {
   color: #424242;
   text-transform: uppercase;
   padding-right: 20px;
+  background-color: transparent;
   background-image: url("images/fa-angle-down.png");
   background-size: 12px;
   background-repeat: no-repeat;
@@ -895,7 +896,7 @@ body {
   -webkit-animation-timing-function: ease-out, ease-in-out;
   animation-timing-function: ease-out, ease-in-out;
   -webkit-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1 infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-direction: normal, alternate;
